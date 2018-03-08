@@ -283,12 +283,9 @@ def process_image(img, box_list):
     # Apply threshold to help remove false positives
     #heat = apply_threshold(heat,1)
     heat = apply_threshold(heatmap,max(len(history)//2, 2))
-    #heat = apply_threshold(heatmap, max(len(history)//2, 1))
-
 
     # Find final boxes from heatmap using label function
     labels = label(heat)
-    #print(len(labels))
     draw_img = draw_labeled_bboxes(np.copy(img), labels)
     return draw_img, heat
 
@@ -318,7 +315,6 @@ def find_cars_subsamples(img, datasetname):
     iteration=0
     for (ystart, ystop,xstart, xstop, scale) in zip(ystarts, ystops,xstarts, xstops, scales):
         iteration += 1
-        #print("iteration: ", iteration)        
         draw_img, bboxes_subsample = find_cars(img, ystart, ystop, xstart, xstop, scale, svc, X_scaler, orient, pix_per_cell, cell_per_block, spatial_size, hist_bins)
         bboxes.extend(bboxes_subsample)
             
@@ -330,8 +326,6 @@ def add_heat(heatmap, bbox_list):
         # Add += 1 for all pixels inside each bbox
         # Assuming each "box" takes the form ((x1, y1), (x2, y2))
         heatmap[box[0][1]:box[1][1], box[0][0]:box[1][0]] += 1
-        #heatmap[box[0][1]:box[1][1], box[0][0]:box[1][0]] = 1
-    
 
     # Return updated heatmap
     return heatmap# Iterate through list of bboxes

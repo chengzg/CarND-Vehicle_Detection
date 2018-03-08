@@ -101,9 +101,9 @@ Ultimately I searched on two scales using YCrCb 3-channel HOG features plus spat
 ### Video Implementation
 
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (somewhat wobbly or unstable bounding boxes are ok as long as you are identifying the vehicles most of the time with minimal false positives.)
-Here's a [link to my test video result](./test_video_result.mp4)
+Here's a [link to my test video result](./test_result_video.mp4)
 
-Here's a [link to my project video result](./project_video_result.mp4)
+Here's a [link to my project video result](./project_result_video.mp4)
 
 
 #### 2. Describe how (and identify where in your code) you implemented some kind of filter for false positives and some method for combining overlapping bounding boxes.
@@ -119,6 +119,7 @@ the regions that are not shown up in half of the tracked frames which is 8. The 
 test images with corresponding heatmaps.
 
 ![alt text][image14]
+
 ![alt text][image17]
 
 ---

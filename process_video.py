@@ -20,11 +20,9 @@ def export_frame(img):
         mpimg.imsave(imgPath, img)
     return img
 
-
 def process_frame(img, returnHeatmap=False):
     #datasetname = "svcClassifier_small.p"
     datasetname = "svcClassifier_full.p"
-    #out_img, box_list = find_cars_subsamples(img, svc, X_scaler, orient, pix_per_cell, cell_per_block, spatial_size, hist_bins)
     out_img, box_list = find_cars_subsamples(img, datasetname)
     draw_img, heatmap = process_image(out_img, box_list)
 
@@ -40,7 +38,6 @@ def process_frame(img, returnHeatmap=False):
         return draw_img, heatmap
     else:
         return draw_img
-
 
 saveImage = False
 current_frame_index = 0
