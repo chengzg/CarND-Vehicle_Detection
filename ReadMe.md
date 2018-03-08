@@ -118,8 +118,8 @@ To improve the correctness of the detection, i used a queue fo store the last 16
 the regions that are not shown up in half of the tracked frames which is 8. The related code is in `process_image` function of `lesson_functions.py` file. After applying this average technique, i got below output from the above
 test images with corresponding heatmaps.
 
-![alt text][image13]
-![alt text][image15]
+![alt text][image14]
+![alt text][image17]
 
 ---
 
