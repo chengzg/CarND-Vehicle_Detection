@@ -27,6 +27,8 @@ The goals / steps of this project are the following:
 [image15]: ./output_images/original2.jpg
 [image16]: ./output_images/detection2.jpg
 [image17]: ./output_images/detection_with_heatmap2.jpg
+[image18]: ./output_images/test_image1.jpg
+[image19]: ./output_images/test_image2.jpg
 ## [Rubric](https://review.udacity.com/#!/rubrics/513/view) Points
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
 
@@ -95,7 +97,8 @@ so i add another constraints to romove search features from the left half as sho
 #### 2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
 
 Ultimately I searched on two scales using YCrCb 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result.  Here are some example images:
-
+![alt text][image18]
+![alt text][image19]
 ---
 
 ### Video Implementation
